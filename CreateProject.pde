@@ -37,7 +37,7 @@ void draw() {
     float bluePossession = float(b.ballHits*100)/(float(b.ballHits)+float(r.ballHits));
     text("Blue Shot Percentage: "+str(blueShotPercentage)+"%", width/2-75, 50);
     text("Blue Possession: "+str(bluePossession)+"%", width/2-75, 65);
-    text("Blue Chance of Winning: "+(pow((bluePossession*blueShotPercentage*.001),(float(5-leftGoal.goalCount))))*100+"%", width/2-75, 80);
+    text("Blue Chance of Winning: "+(pow((bluePossession*blueShotPercentage*.001),(float(abs(rightGoal.goalCount)+5-leftGoal.goalCount))))*100+"%", width/2-75, 80);
   }else if(b.ballHits == 0){
     
   }
@@ -47,7 +47,7 @@ void draw() {
     float redPossession = float(r.ballHits*100)/(float(b.ballHits)+float(r.ballHits));
     text("Red Shot Percentage: "+str(redShotPercentage)+"%", width/2-75, 95);
     text("Red Possession: "+str(redPossession)+"%", width/2-75, 110);
-    text("Red Chance of Winning: "+(pow((redPossession*redShotPercentage*.001),(float(5-rightGoal.goalCount))))*100+"%", width/2-75, 125);
+    text("Red Chance of Winning: "+(pow((redPossession*redShotPercentage*.001),(float(abs(leftGoal.goalCount)+5-rightGoal.goalCount))))*100+"%", width/2-75, 125);
   }else if(r.ballHits == 0){
   }
    
