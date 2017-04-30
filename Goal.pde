@@ -1,6 +1,7 @@
 class Goal {
   public PVector gPosition;
   public PVector gSize;
+  public int ballHits;
   public int corners;
   public int goalCount;
   public color gColor;

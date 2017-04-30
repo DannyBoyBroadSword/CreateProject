@@ -5,10 +5,12 @@ class Player {
   PVector accel;
   int score;
   color col;
+  int ballHits;
   int playWidth;
   int playHeight;
 
   Player (String team) {
+    this.ballHits = ballHits;
     this.team = team;
     if (team.equals("blue")) { 
       pos = new PVector((width-playWidth)*0.85, height*0.5);
@@ -30,6 +32,10 @@ class Player {
   PVector getVel() {
     return vel;
     
+  }
+  
+  int getHits(){
+    return ballHits;
   }
   
   void update() {

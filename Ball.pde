@@ -42,6 +42,8 @@ class Ball {
         (this.bPosition.x - this.bSize/2 < p.pos.x + p.playWidth) &&
         (this.bPosition.y + this.bSize/2 > p.pos.y) &&
         (this.bPosition.y - this.bSize/2 < p.pos.y + p.playHeight)) {
+          p.ballHits +=1;
+         println(p.ballHits);
       this.bVel.x = p.vel.x + abs(p.vel.x)/p.vel.x;
       this.bVel.y = p.vel.y + abs(p.vel.y)/p.vel.y;      
         }
